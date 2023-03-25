@@ -14,6 +14,7 @@ const corsOptions = require("./config/corsOptions.js");
 
 const app = express();
 app.use(cookieParser());
+app.use(express.json());
 app.use(bodyParser.json({ limit: "50mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cors(corsOptions));
